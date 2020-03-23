@@ -7,7 +7,7 @@
 %% njuthesis.dtx  (with options: `cls')
 %% This is a generated file.
 %% 
-%% Copyright (C) 2013-2016, Haixing Hu.
+%% Copyright (C) 2013-2017, Haixing Hu.
 %% Department of Computer Science and Technology, Nanjing University.
 %% 
 %% Home Page of the Project: http://haixing-hu.github.io/nju-thesis/
@@ -25,7 +25,7 @@
 %% through LaTeX.
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{njuthesis.cls}
- [2016/02/24 v1.1.19 Document Class for the Degree Papers of Nanjing University]
+ [2018/08/07 v1.2.2 Document Class for the Degree Papers of Nanjing University]
 \newif\ifnjut@adobefonts\njut@adobefontstrue
 \newif\ifnjut@winfonts\njut@winfontsfalse
 \newif\ifnjut@linuxfonts\njut@linuxfontsfalse
@@ -482,13 +482,13 @@
 \floatstyle{plaintop}
 \restylefloat{table}
 \renewcommand*{\baselinestretch}{1.38}
-\let\convertergy@oldtabular\tabular
-\let\convertergy@endoldtabular\endtabular
+\let\njut@oldtabular\tabular
+\let\njut@endoldtabular\endtabular
 \renewenvironment{tabular}%
 {\bgroup%
 \renewcommand{\arraystretch}{1.38}%
-\convertergy@oldtabular}%
-{\convertergy@endoldtabular\egroup}
+\njut@oldtabular}%
+{\njut@endoldtabular\egroup}
 \geometry{headheight=2.6cm,headsep=3mm,footskip=13mm}
 \geometry{top=3.5cm,bottom=3.5cm,left=3.2cm,right=3.2cm}
 \def\njut@CJK@charwidth{\hskip \f@size \p@}
@@ -824,10 +824,10 @@
       & \njutunderline[310pt]{\njut@value@author}\\
       \makebox[7em][s]{\njut@cap@cover@major}
       & \njutunderline[310pt]{\njut@value@major}\\
-      \makebox[7em][s]{\njut@cap@cover@supervisor}
-      & \njutunderline[310pt]{\njut@value@supervisor}\\
       \makebox[7em][s]{\njut@cap@cover@researchfield}
       & \njutunderline[310pt]{\njut@value@researchfield}\\
+      \makebox[7em][s]{\njut@cap@cover@supervisor}
+      & \njutunderline[310pt]{\njut@value@supervisor}\\
   \end{tabular}
 }
 \newcommand*{\njut@covertable@twolinetitle}{
@@ -840,10 +840,10 @@
       & \njutunderline[310pt]{\njut@value@author}\\
       \makebox[7em][s]{\njut@cap@cover@major}
       & \njutunderline[310pt]{\njut@value@major}\\
-      \makebox[7em][s]{\njut@cap@cover@supervisor}
-      & \njutunderline[310pt]{\njut@value@supervisor}\\
       \makebox[7em][s]{\njut@cap@cover@researchfield}
       & \njutunderline[310pt]{\njut@value@researchfield}\\
+      \makebox[7em][s]{\njut@cap@cover@supervisor}
+      & \njutunderline[310pt]{\njut@value@supervisor}\\
   \end{tabular}
 }
 \renewcommand*{\maketitle}{%
